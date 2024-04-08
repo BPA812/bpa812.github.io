@@ -7,15 +7,55 @@
     <title>Flash Game World!</title>
     <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 </head>
-<body>
+<body style="font-family: Arial, Helvetica, sans-serif;" onload="startTime()">
     <h1>Flash Games!!!</h1>
-    <h1 style="font-family: Arial, Helvetica, sans-serif;">Papa's Pizzeria:</h1>
+    <h2>The Time:</h2>
+    <div id="txt"></div>
+    <script>
+        function startTime() {
+          const today = new Date();
+          let h = today.getHours();
+          let m = today.getMinutes();
+          let s = today.getSeconds();
+          m = checkTime(m);
+          s = checkTime(s);
+          document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+          setTimeout(startTime, 1000);
+        }
+        
+        function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+        }
+    </script>
+    <h4 style="font-family: Arial, Helvetica, sans-serif;">Contents:</h4>
+    <ui style="font-family: Arial, Helvetica, sans-serif;">
+        <li><a href="#papa1">Papa's Pizzeria</a></li>
+        <li><a href="#ltf1">Learn To Fly</a></li>
+        <li><a href="#dl1">Duck Life 1</a></li>
+        <li><a href="#dl2">Duck Life 2</a></li>
+        <li><a href="#dl3">Duck Life 3</a></li>
+        <li><a href="#dl4">Duck Life 4</a></li>
+    </ui>
+    <h1 style="font-family: Arial, Helvetica, sans-serif;" id="papa1">Papa's Pizzeria:</h1>
     <script src="https://xxsibxx.github.io/ruffleembedsetup112/ruffle/ruffle.js"></script>
     <div class="swf"dir="ltr" style="text-align: left;" trbidi="on">
         <embed height="480" pluginspage=" http://www.macromedia.com/go/getflashplayer" src="Papa's Pizzeria (2007).swf" type="application/x-shockwave-flash" width="620"></embed>
-    <h1 style="font-family: Arial, Helvetica, sans-serif;">Learn To Fly:</h1>
+    <h1 style="font-family: Arial, Helvetica, sans-serif;" id="ltf1">Learn To Fly:</h1>
     <div class="swf"dir="ltr" style="text-align: left;" trbidi="on">
         <embed height="480" pluginspage=" http://www.macromedia.com/go/getflashplayer" src="Learn To Fly (2009).swf" type="application/x-shockwave-flash" width="620"></embed>
+    <h1 style="font-family: Arial, Helvetica, sans-serif;" id="dl1">Duck Life 1:</h1>
+    <div class="swf"dir="ltr" style="text-align: left;" trbidi="on">
+        <embed height="480" pluginspage=" http://www.macromedia.com/go/getflashplayer" src="Duck Life 1 (2010).swf" type="application/x-shockwave-flash" width="620"></embed>
+    <h1 style="font-family: Arial, Helvetica, sans-serif;" id="dl2">Duck Life 2:</h1>
+    <div class="swf"dir="ltr" style="text-align: left;" trbidi="on">
+        <embed height="480" pluginspage=" http://www.macromedia.com/go/getflashplayer" src="Duck Life 2 (2010).swf" type="application/x-shockwave-flash" width="620"></embed>
+    <h1 style="font-family: Arial, Helvetica, sans-serif;" id="dl3">Duck Life 3:</h1>
+    <div class="swf"dir="ltr" style="text-align: left;" trbidi="on">
+        <embed height="480" pluginspage=" http://www.macromedia.com/go/getflashplayer" src="Duck Life 3 (2011).swf" type="application/x-shockwave-flash" width="620"></embed>
+    <h1 style="font-family: Arial, Helvetica, sans-serif;" id="dl4">Duck Life 4:</h1>
+    <div class="swf"dir="ltr" style="text-align: left;" trbidi="on">
+            <embed height="480" pluginspage=" http://www.macromedia.com/go/getflashplayer" src="Duck Life 4 (2012).swf" type="application/x-shockwave-flash" width="620"></embed>
 
 </div>
 </body>
